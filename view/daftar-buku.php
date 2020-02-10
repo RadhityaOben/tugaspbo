@@ -11,14 +11,15 @@
 				<th>Kode Buku</th>
 				<th>Judul</th>
 				<th>Tahun Terbit</th>
-				<th>Tools</th>
+				<th colspan='2'>Tools</th>
 			</tr>";
 		while($data = mysqli_fetch_row($hasil))
 		{
 			echo "<tr><td>" . $data[0] . "</td>";
 			echo "<td>" . $data[1] . "</td>";
 			echo "<td>" . $data[2] . "</td>";
-			echo "<td><a href='?page=edit-buku&id=$data[0]'>Edit</a></td>";
+			echo "<td><a href='?page=edit-buku&kode=$data[0]'>Edit</a></td>";
+			echo "<td><a href='?page=hapus-buku&kode=$data[0]'>Hapus</a></td></tr>";
 		}
 		echo "</table>";
 
