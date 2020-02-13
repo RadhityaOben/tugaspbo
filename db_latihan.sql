@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2020 at 11:18 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.1.12
+-- Generation Time: Feb 13, 2020 at 05:51 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -98,6 +98,26 @@ INSERT INTO `penulis_buku` (`kode_pengarang`, `kode_buku`) VALUES
 (1012, 19264),
 (1012, 19354),
 (1014, 16284);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`) VALUES
+('ben', 'ben123'),
+('admin', 'admin'),
+('superadmin', 'su');
 
 --
 -- Indexes for dumped tables
